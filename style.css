@@ -1,0 +1,34 @@
+:root {
+    --primary: #ff7645;
+    --primary-gradient: linear-gradient(135deg, #ff7645 0%, #ff966a 100%);
+    --dark: #1a1a1a;
+    --glass: rgba(255, 255, 255, 0.85);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body { font-family: 'Inter', sans-serif; background: #fffaf8; color: var(--dark); }
+
+.navbar { background: var(--glass) !important; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,118,69,0.1); }
+
+.btn-warning {
+    background: var(--primary-gradient) !important;
+    border: none !important; border-radius: 12px !important;
+    font-weight: 600 !important; color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 118, 69, 0.3) !important;
+    transition: transform 0.3s ease !important;
+}
+.btn-warning:hover { transform: translateY(-3px); }
+
+.explore-card {
+    border: none !important; border-radius: 20px !important;
+    background: white !important; transition: all 0.4s ease !important;
+    box-shadow: var(--shadow) !important; overflow: hidden;
+}
+.explore-card:hover { transform: translateY(-10px); }
+
+.glass-card {
+    background: var(--glass) !important; backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.4) !important; border-radius: 30px !important;
+}
+
+#mainExploreMap, #mapSelection { border-radius: 24px; border: 4px solid white; box-shadow: var(--shadow); }
