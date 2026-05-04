@@ -9,9 +9,6 @@ https://spotnow-backend.netlify.app/
 ## Preview
 
 ![HomePage](./spotnow-backend.netlify.app_.png)
-![About](./spotnow-backend.netlify.app_about.png)
-![Explore](./spotnow-backend.netlify.app_explore.png)
-![Authentication page](./spotnow-backend.netlify.app_auth.html.png)
 
 ## Problem Statement
 
