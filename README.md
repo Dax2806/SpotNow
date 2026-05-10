@@ -1,58 +1,77 @@
-# SpotNow - Discover hidden gems of your city
+# 🗺️ SpotNow | City Discovery Platform
 
-SpotNow is a modern, community-driven city discovery platform designed to help users find and share "hidden gems"—unique, lesser-known locations such as tucked-away cafés, secret gardens, rooftop views, and street art. The project connects local explorers with travelers by providing an interactive, map-based interface for authentic urban exploration.
+<div align="center">
+  <h3>Discover and Share the Hidden Gems of Your City.</h3>
+  <p>A modern, community-driven platform for finding tucked-away cafés, secret gardens, rooftop views, and street art.</p>
+  <p>
+    <a href="https://spotnow-backend.netlify.app/" target="_blank"><strong>View Live Demo ↗</strong></a>
+  </p>
+</div>
 
-## Live Demo
+---
 
-https://spotnow-backend.netlify.app/
+## 📖 Overview
 
-## Preview
+**SpotNow** is a full-stack web application designed to connect local explorers with travelers by providing an interactive, map-based interface for authentic urban exploration. Users can explore a curated grid of locations, view them on an interactive Leaflet.js map, and contribute their own findings to the community.
 
-![HomePage](./spotnow-backend.netlify.app_.png)
+## ✨ Key Features
 
-## Problem Statement
+- **Interactive Map Exploration:** Browse a filterable grid of spots (Cafés, Parks, Viewpoints, Art) accompanied by real-time map markers powered by Leaflet.js.
+- **Geographical Pinning:** A dedicated "Add Spot" interface allows users to click directly on the map to capture precise latitude and longitude coordinates.
+- **Community Contributions:** Registered users can submit new spots by providing a name, location description, category, and photo upload.
+- **Secure Authentication:** Features a complete signup and login system with hashed passwords (bcrypt) to protect user identities.
+- **Privacy & Access Control:** Implements a global "Auth Guard" that redirects unauthorized visitors to the login page, ensuring the platform's content remains exclusive to the community.
+- **Glassmorphism Design:** High-end visual effects achieved using semi-transparent backgrounds and soft shadows to create a layered "glass" feel.
 
-Urban exploration and city discovery are currently dominated by mass-market navigation tools and commercial review platforms. While these tools are excellent for finding popular businesses, they are built on algorithms that prioritize high-traffic, commercialized locations over authentic local culture.
+---
 
-There is a significant "Discovery Gap" in modern urban navigation. Residents and travelers frequently miss out on unique "hidden gems"—such as tucked-away cafés, secret gardens, or local art—because these spots lack the marketing budget to compete for visibility on major platforms.
+## 🛠️ Tech Stack
 
-Furthermore, existing social sharing often lacks geospatial precision. Users may see a photo of a beautiful location online but struggle to find its exact coordinates or authentic "insider" tips on how to access it.
+### Frontend (Client)
+- **Structure & Styling:** HTML5, CSS3, Bootstrap 5
+- **Interactivity:** Vanilla JavaScript (ES6+)
+- **Mapping:** Leaflet.js & OpenStreetMap
 
-To solve this, a platform must address several key technical hurdles:
+### Backend (Server)
+- **Runtime & Framework:** Node.js, Express.js
+- **Database:** MongoDB Atlas (Mongoose ORM)
+- **Authentication:** JSON Web Tokens (JWT) & bcryptjs
+- **File Storage:** Multer (for handling multipart/form-data image uploads)
 
-Trust & Verification: The need for a secure authentication system to ensure contributions come from a     verified community rather than bots.  
+---
 
-Geospatial Accuracy: Providing a way for users to pinpoint exact locations on a map rather than relying on generic addresses.
+## 🚀 Local Development
 
-Privacy & Exclusivity: Managing access so that the community-curated data is protected from unauthorized scraping or public exploitation.
+To run SpotNow locally on your machine, follow these steps:
 
-## Solution
+### Prerequisites
+- [Node.js](https://nodejs.org/en/) (v14 or higher)
+- [MongoDB](https://www.mongodb.com/) (Local or Atlas Cluster)
 
-SpotNow addresses these issues by providing a secure, community-driven platform that utilizes interactive mapping (Leaflet.js) and cloud-based storage (MongoDB). By allowing users to precisely pin locations and share visual evidence, the platform decentralizes city discovery and places the power of "hidden gem" curation back into the hands of local explorers.
+### 1. Clone the repository
+```bash
+git clone https://github.com/Dax2806/SpotNow.git
+cd SpotNow
+```
 
-## Tech Stack
+### 2. Environment Setup
+Create a `.env` file in the root directory:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_jwt_key
+```
 
-Frontend (Client-Side)
-- Languages: HTML5, CSS3, and JavaScript (ES6+).
-- Framework: Bootstrap 5.3.6 for responsive layout and pre-built UI components.
-- Icons: Font Awesome 6.7.2 for scalable vector icons.
-- Design System: Custom Glassmorphism styles utilizing CSS variables, backdrop filters, and soft gradients.
-- State Management: LocalStorage for maintaining user authentication status across sessions.
+### 3. Install Dependencies & Run
+```bash
+npm install
+npm run dev
+```
 
-Backend (Server-Side)
-- Environment: Node.js for the runtime environment.  
-- Web Framework: Express for handling RESTful API routes and middleware.  
-- File Handling: Multer for processing multipart/form-data, specifically for user image uploads.  
-- Security: Bcryptjs for secure, one-way password hashing before database storage.  
-- Environment Configuration: Dotenv to securely manage sensitive API keys and connection strings.  
+The application backend and frontend will be served concurrently.
 
-Database & Storage
-- Primary Database: MongoDB Atlas (Cloud NoSQL database).  
-- Object Modeling: Mongoose for defining schemas and interacting with MongoDB.  
-- File Storage: Local Server Disk (Render ephemeral storage) for images.
+---
 
-Deployment & Infrastructure
-- Frontend Hosting: Netlify for high-speed delivery of static assets and frontend logic.
-- Backend Hosting: Render for managing the live Node.js web service and API endpoints.
-- Version Control: Git for source code management and deployment triggers.
-
+<div align="center">
+  <i>Designed and developed by <a href="https://github.com/Dax2806">Daksh Patadia</a></i>
+</div>
